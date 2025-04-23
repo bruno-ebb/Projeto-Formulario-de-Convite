@@ -1,0 +1,60 @@
+:root {
+
+  font-size: 62.5%;
+  /* 1rem = 10px */
+
+  /* FONTS */
+  --leckerli-font: 'Leckerli One', sans-serif;
+  --logo-font: 400 4rem/normal var(--leckerli-font);
+
+  --baloo-font: 'Baloo 2', sans-serif;
+  --heading-md: 700 2.8rem/auto var(--baloo-font);
+  --heading-sm: 700 1.8rem/auto var(--baloo-font);
+
+  --open-sans-font: 'Open Sans', sans-serif;
+  --body-text-md: 400 1.6rem/normal var(--open-sans-font);
+  --body-text-sm: 400 1.4rem/normal var(--open-sans-font);
+  --body-text-xs: 400 1.2rem/normal var(--open-sans-font);
+
+  /* COLORS */
+  --purple: #B259FF;
+  --fuchsia: #FF59F9;
+  --pink: #FF598b;
+  --orange: #FF8B59;
+  --yellow: #FFCD59;
+  --lime: #E1FF59;
+  --green: #59FF91;
+  --cyan: #59FFF9;
+  --navy: #6A59FF;
+  --danger: #ff5959;
+
+  --input-base: #1C1F21;
+  --input-stroke: #363B40;
+  --input-placeholder: #869198;
+
+  --bg-gradient: linear-gradient(180deg, rgba(33, 37, 38, 0.80) 0%, rgba(33, 37, 38, 0.65) 20%, rgba(33, 37, 38, 0.30) 40.5%, rgba(33, 37, 38, 0.10) 100%);
+  --shape-bg: #131516;
+  --shape-body: #212427;
+  --shape-btn: #2d3136;
+  --shape-hover: #383d42;
+
+  --text-body: #c8cdd0;
+  --text-heading: #f9f9f9;
+  
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--shape-bg);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
