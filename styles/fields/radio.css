@@ -1,0 +1,73 @@
+.color-selector-wrapper {
+  align-items: center;
+  justify-content: space-around;
+  gap: .7rem;
+  margin-top: 1rem;
+
+  
+  & input[type="radio"] {
+    padding: 0;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    cursor: pointer;
+
+    /* border: 2px solid transparent; */
+    border: .6rem solid var(--shape-btn);
+
+    &:hover,
+    &:focus-within {
+    border-color: var(--input-stroke);
+
+  }
+    
+  }
+  
+}
+
+.color {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 999px;
+  background-color: var(--shape-button);
+
+  &:has(:checked) {
+    outline: 2px solid var(--brand-blue);
+  }
+
+  
+}
+
+#color-1 {
+  background-color: var(--brand-blue);
+}
+#color-2 {
+  background-color: var(--navy);
+}
+#color-3 {
+  background-color: var(--purple);
+}
+#color-4 {
+  background-color: var(--fuchsia);
+}
+#color-5 {
+  background-color: var(--pink);
+}
+#color-6 {
+  background-color: var(--danger);
+}
+#color-7 {
+  background-color: var(--orange);
+}
+#color-8 {
+  background-color: var(--yellow);
+}
+#color-9 {
+  background-color: var(--lime);
+}
+#color-10 {
+  background-color: var(--green);
+}
+#color-11 {
+  background-color: var(--cyan);
+}

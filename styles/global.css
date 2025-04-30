@@ -8,8 +8,8 @@
   --logo-font: 400 4rem/normal var(--leckerli-font);
 
   --baloo-font: 'Baloo 2', sans-serif;
-  --heading-md: 700 2.8rem/auto var(--baloo-font);
-  --heading-sm: 700 1.8rem/auto var(--baloo-font);
+  --heading-md: 700 2.8rem/normal var(--baloo-font);
+  --heading-sm: 700 1.8rem/normal var(--baloo-font);
 
   --open-sans-font: 'Open Sans', sans-serif;
   --body-text-md: 400 1.6rem/normal var(--open-sans-font);
@@ -25,6 +25,7 @@
   --lime: #E1FF59;
   --green: #59FF91;
   --cyan: #59FFF9;
+  --brand-blue: #58b2ff;
   --navy: #6A59FF;
   --danger: #ff5959;
 
@@ -52,9 +53,48 @@
 
 body {
   background-color: var(--shape-bg);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  
+  overflow: hidden;
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+/* Works on Firefox */
+/* * {
+  scrollbar-width: thin;
+  scrollbar-color: var(--shape-hover) var(--shape-body);
+} */
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* *::-webkit-scrollbar-track {
+  background: var(--shape-body);
+  border-radius: 10px;
+} */
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--shape-hover);
+  border-radius: 20px;
+  border: 3px solid var(--shape-body);
 }

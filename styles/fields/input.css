@@ -1,0 +1,98 @@
+label, .input-wrapper span {
+  font: var(--body-text-sm);
+  color: var(--text-body);
+
+  display: block;
+  margin-bottom: 1.2rem;
+}
+
+
+input, textarea {
+  appearance: none;
+  width: 100%;
+
+  border: 1px solid var(--input-stroke);
+  border-radius: 8px;
+  padding: 1.3rem 1.6rem;
+  font: var(--body-text-sm);
+  color: var(--input-placeholder);
+  background-color: var(--input-base);
+
+  cursor: pointer;
+}
+
+input[type="datetime-local"] {
+  text-transform: uppercase;
+
+  &::-webkit-calendar-picker-indicator {
+    opacity: 0;
+  }
+}
+
+.input-wrapper {
+  width: 100%;
+}
+
+
+
+/* 
+.toggle-wrapper {
+  font-family: sans-serif;
+  color: var(--text-body, #c8cdd0);
+}
+
+.toggle {
+  position: relative;
+  display: flex;
+  background: #1C1F21;
+  border: 1px solid #363B40;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  width: fit-content;
+}
+
+.toggle input {
+  display: none;
+}
+
+.toggle label {
+  cursor: pointer;
+  padding: 1rem 2.4rem;
+  flex: 1;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.4rem;
+  color: #869198;
+}
+
+.icon svg {
+  width: 1.6rem;
+}
+
+.toggle input:checked + label {
+  color: #f9f9f9;
+}
+
+.toggle input#presencial:checked ~ .slider {
+  transform: translateX(0%);
+}
+
+.toggle input#online:checked ~ .slider {
+  transform: translateX(100%);
+}
+
+.toggle .slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #2d3136;
+  border-radius: 0.8rem;
+  z-index: 1;
+  transition: transform 0.3s ease;
+} */
