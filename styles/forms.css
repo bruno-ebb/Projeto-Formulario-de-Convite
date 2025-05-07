@@ -36,3 +36,9 @@ legend {
 .about legend img {
   transform: translateY(-2px);
 }
+
+.style-wrapper {
+  /* align-items: center; */
+  margin-top: 2.8rem;
+}
+

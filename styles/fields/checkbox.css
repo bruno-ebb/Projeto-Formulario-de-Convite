@@ -1,0 +1,225 @@
+.checkbox-wrapper {
+
+  /* width: 17.6rem; */
+
+  & input {
+    all: unset;
+  }
+
+  &:focus-within .dark {
+    outline: 2px solid var(--brand-blue);
+    outline-offset: 2px;
+  }
+}
+
+.checkbox-wrapper .style-title {
+  font: var(--body-text-sm);
+  color: var(--text-body);
+
+  display: block;
+  margin-bottom: 3rem;
+}
+
+.toggle-button {
+  
+  display: flex;
+  align-items: center;
+  
+}
+
+.toggle-button-wrapper {
+
+  display: flex;
+  align-items: center;
+
+
+  & .dark {
+    position: relative;
+    background-color: var(--input-base);
+    width: 6.4rem;
+    height: 3.2rem;
+    outline: 1px solid #363b3f;
+    border-radius: 200px;
+    cursor: pointer;
+
+    /* margin-bottom: 0; */
+    overflow: hidden;
+
+    transition: background-color ease 0.3s;
+
+  }
+
+  & .dark::before {
+    position: absolute;
+    content: "";
+    background-color: #363b3f;
+    margin: 0.4rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 999px;
+    transition: ease 0.3s;
+  }
+}
+
+.checkbox-wrapper input:checked + .dark {
+  background-color: var(--brand-blue);
+}
+
+.checkbox-wrapper input:checked + .dark::before {
+  background-color: var(--text-heading);
+
+  transform: translateX(3.2rem);
+}
+
+.toggle-text {
+  display: block;
+  align-items: center;
+  margin-bottom: 1.2rem;
+  
+}
+
+.toggle-text::after {
+  content: "Escuro";
+  font: var(--body-text-sm);
+  color: var(--text-body);
+  margin-bottom: 0;
+
+  margin-left: 1.2rem;
+  
+}
+
+.checkbox-wrapper input:checked ~ .toggle-text::after {
+  content: "Claro";
+}
+
+/* ------------------------------------------------ */
+
+.terms-wrapper {
+  gap: 0.4rem;
+  border-top: 1px solid var(--input-stroke);
+  padding-top: 4rem;
+  margin-top: 4.8rem;
+}
+
+.terms-checkbox-wrapper {
+  flex-wrap: nowrap;
+  position: relative;
+  align-items: flex-start;
+  gap: 1.2rem;
+
+  & [type="checkbox"] {
+    all: unset;
+    position: absolute;
+    /* inset: 0; */
+    height: 2rem;
+    width: 2rem;
+    left: 0;
+    top: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    /* FAZ COM QUE O CHECKBOX PREENCHA TODO O CHECKBOX-WRAPPER */
+
+    &:focus-within{
+      outline: 1px solid var(--brand-blue);
+    }
+  }
+
+  & .terms-checkbox-image {
+    flex: 0 0 2rem;
+    height: 2rem;
+    width: 2rem;
+    background-image: url(../../assets/icons/checkbox-default.svg);
+    
+  }
+
+  &:has(:checked) .terms-checkbox-image {
+    background-image: url(../../assets/icons/checkbox-checked.svg);
+  }
+
+
+}
+
+
+/* -------------------------------------------------- */
+
+.type-wrapper span {
+  font: var(--body-text-sm);
+  color: var(--text-body);
+
+  display: block;
+  margin-bottom: 1.2rem;
+}
+
+.type-selector {
+  position: relative;
+  display: flex;
+  border: 1px solid var(--input-stroke);
+  border-radius: 8px;
+  background-color: var(--input-base);
+  overflow: hidden;
+  padding: 4px;
+
+}
+
+.type-selector input[type="radio"] {
+  display: none;
+}
+
+.type-option {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 0;
+  z-index: 2;
+  height: 3.65rem;
+
+
+  color: var(--text-body);
+  font: var(--body-text-sm);
+  cursor: pointer;
+
+  transition: color 0.3s ease;
+}
+
+.type-option img {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0.7);
+  transition: filter 0.3s;
+}
+
+.selector-highlight {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 48.6%;
+  margin: 4px;
+  background-color: var(--shape-btn);
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+#online:checked ~ .selector-highlight {
+  transform: translateX(100%);
+}
+
+#presencial:checked ~ .selector-highlight {
+  transform: translateX(0%);
+}
+
+#presencial:checked ~ label[for="presencial"],
+#online:checked ~ label[for="online"] {
+  color: #fff;
+}
+
+#presencial:checked ~ label[for="presencial"] img,
+#online:checked ~ label[for="online"] img {
+  filter: invert(52%) sepia(96%) saturate(747%) hue-rotate(175deg) brightness(93%) contrast(89%); /* efeito azulado */
+}

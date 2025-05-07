@@ -12,15 +12,12 @@
     border-radius: 50%;
     cursor: pointer;
 
-    /* border: 2px solid transparent; */
     border: .6rem solid var(--shape-btn);
 
-    &:hover,
-    &:focus-within {
-    border-color: var(--input-stroke);
+    &:hover {
+      border-color: var(--shape-hover);
+    }
 
-  }
-    
   }
   
 }
@@ -29,13 +26,13 @@
   width: 4rem;
   height: 4rem;
   border-radius: 999px;
-  background-color: var(--shape-button);
+  background-color: var(--shape-btn);
 
-  &:has(:checked) {
+  &:focus-within,
+  &:focus {
     outline: 2px solid var(--brand-blue);
   }
 
-  
 }
 
 #color-1 {
@@ -70,4 +67,54 @@
 }
 #color-11 {
   background-color: var(--cyan);
+}
+
+
+/* -------------------------------------- */
+
+
+.theme-selector-wrapper {
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding-top: .4rem;
+  
+}
+
+.theme-input {
+  background-color: var(--shape-btn);
+  position: relative;
+  border: 1px solid var(--input-stroke);
+  border-radius: .8rem;
+  padding: .4rem .4rem 0;
+
+  & input {
+    all: unset;
+    appearance: none;
+    position: absolute;
+    inset: 0;;
+    cursor: pointer;
+  }
+
+  & img {
+    border-radius: .4rem;
+    height: 6.4rem;
+    width: 12.6rem;
+
+    object-fit: cover;
+  }
+
+  & label {
+    text-align: center;
+    margin: .8rem 0 .8rem;
+  }
+
+  &:hover {
+    background-color: var(--shape-hover);
+  }
+
+  &:focus-within,
+  &:has(:checked) {
+    outline: 2px solid var(--brand-blue);
+  }
 }
